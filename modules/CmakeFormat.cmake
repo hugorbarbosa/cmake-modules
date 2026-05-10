@@ -1,6 +1,35 @@
 #
 # Copyright (C) 2025 Hugo Barbosa.
 #
+# Usage:
+#
+# - Include the module in your CMakeLists file (recommended to include it optionally using a CMake
+#   option):
+# ~~~
+#       include(CmakeFormat)
+# ~~~
+#
+# - Call the function with the desired configuration values in your CMakeLists file. For details
+#   about the function arguments, see the documentation of the function. Example:
+# ~~~
+#       add_cmake_format(
+#           DIRECTORIES
+#               "${CMAKE_CURRENT_SOURCE_DIR}/cmake"
+#               "${CMAKE_CURRENT_SOURCE_DIR}/examples"
+#               "${CMAKE_CURRENT_SOURCE_DIR}/include"
+#                ${CMAKE_CURRENT_SOURCE_DIR}/src"
+#               "${CMAKE_CURRENT_SOURCE_DIR}/test"
+#           EXTRA_FILES "${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt"
+#           LOG_FILE "${CMAKE_BINARY_DIR}/cmake_format_report.log"
+#       )
+# ~~~
+#
+# - Configure and build the desired target. Example:
+# ~~~
+#       cmake -S . -B ./build
+#       cmake --build ./build --target cmake_format_check
+#       cmake --build ./build --target cmake_format_apply
+# ~~~
 
 # Add targets for CMake code formatting using cmake-format.
 #

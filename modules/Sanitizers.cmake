@@ -1,6 +1,32 @@
 #
 # Copyright (C) 2025 Hugo Barbosa.
 #
+# Usage:
+#
+# - Include the module in your CMakeLists file (recommended to include it optionally using a CMake
+#   option for each sanitizer):
+# ~~~
+#       include(Sanitizers)
+# ~~~
+#
+# - Call the function with the desired configuration values in your CMakeLists file. For details
+#   about the function arguments, see the documentation of the function. Example using CMake options
+#   for each sanitizer:
+# ~~~
+#       add_sanitizers(my_target
+#         ASAN ${MYPROJECT_ENABLE_ASAN}
+#         LSAN ${MYPROJECT_ENABLE_LSAN}
+#         MSAN ${MYPROJECT_ENABLE_MSAN}
+#         TSAN ${MYPROJECT_ENABLE_TSAN}
+#         UBSAN ${MYPROJECT_ENABLE_UBSAN}
+#       )
+# ~~~
+#
+# - Configure with the desired sanitizer and build. Example:
+# ~~~
+#       cmake -S . -B ./build -DMYPROJECT_ENABLE_ASAN=ON
+#       cmake --build ./build
+# ~~~
 
 # Add the given sanitize compiler options to the provided target.
 #

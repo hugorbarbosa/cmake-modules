@@ -1,6 +1,37 @@
 #
 # Copyright (C) 2025 Hugo Barbosa.
 #
+# Usage:
+#
+# - Include the module in your CMakeLists file (recommended to include it optionally using a CMake
+#   option):
+# ~~~
+#       include(Doxygen)
+# ~~~
+#
+# - Call the function with the desired configuration values in your CMakeLists file. For details
+#   about the function arguments, see the documentation of the function. Example:
+# ~~~
+#       add_doxygen(
+#           DOXYFILE_IN "${CMAKE_CURRENT_SOURCE_DIR}/doxygen/Doxyfile.in"
+#           DOXYGEN_PROJECT_NAME "My Project"
+#           DOXYGEN_PROJECT_NUMBER "1.0.0"
+#           DOXYGEN_PROJECT_BRIEF "My project description"
+#           DOXYGEN_INPUT
+#               "${CMAKE_CURRENT_SOURCE_DIR}/examples"
+#               "${CMAKE_CURRENT_SOURCE_DIR}/include"
+#                ${CMAKE_CURRENT_SOURCE_DIR}/src"
+#               "${CMAKE_CURRENT_SOURCE_DIR}/test"
+#           DOXYGEN_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/doxygen"
+#           LOG_FILE "${CMAKE_BINARY_DIR}/doxygen_report.log"
+#       )
+# ~~~
+#
+# - Configure and build the desired target. Example:
+# ~~~
+#       cmake -S . -B ./build
+#       cmake --build ./build --target doxygen
+# ~~~
 
 # Check if the argument with the given name was provided.
 macro(check_required_arg prefix arg_name)

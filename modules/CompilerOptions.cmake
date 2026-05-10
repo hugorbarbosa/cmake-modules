@@ -1,6 +1,20 @@
 #
 # Copyright (C) 2025 Hugo Barbosa.
 #
+# Usage:
+#
+# - Include the module in your CMakeLists file:
+# ~~~
+#       include(CompilerOptions)
+# ~~~
+#
+# - Call the function with the desired configuration values in your CMakeLists file. For details
+#   about the function arguments, see the documentation of the function. Example:
+# ~~~
+#       add_default_compiler_options(my_target
+#           WARNINGS_AS_ERRORS
+#       )
+# ~~~
 
 # Add default compiler options to the provided target.
 #

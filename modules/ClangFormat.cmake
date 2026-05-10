@@ -1,6 +1,33 @@
 #
 # Copyright (C) 2025 Hugo Barbosa.
 #
+# Usage:
+#
+# - Include the module in your CMakeLists file (recommended to include it optionally using a CMake
+#   option):
+# ~~~
+#       include(ClangFormat)
+# ~~~
+#
+# - Call the function with the desired configuration values in your CMakeLists file. For details
+#   about the function arguments, see the documentation of the function. Example:
+# ~~~
+#       add_clang_format(
+#           DIRECTORIES
+#               "${CMAKE_CURRENT_SOURCE_DIR}/examples"
+#               "${CMAKE_CURRENT_SOURCE_DIR}/include"
+#                ${CMAKE_CURRENT_SOURCE_DIR}/src"
+#               "${CMAKE_CURRENT_SOURCE_DIR}/test"
+#           LOG_FILE "${CMAKE_BINARY_DIR}/clang_format_report.log"
+#       )
+# ~~~
+#
+# - Configure and build the desired target. Example:
+# ~~~
+#       cmake -S . -B ./build
+#       cmake --build ./build --target clang_format_check
+#       cmake --build ./build --target clang_format_apply
+# ~~~
 
 # Add targets for code formatting using clang-format.
 #

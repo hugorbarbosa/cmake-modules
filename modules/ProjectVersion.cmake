@@ -1,6 +1,21 @@
 #
 # Copyright (C) 2025 Hugo Barbosa.
 #
+# Usage:
+#
+# - Include the module in your CMakeLists file:
+# ~~~
+#       include(ProjectVersion)
+# ~~~
+#
+# - Call the function with the desired configuration values in your CMakeLists file. For details
+#   about the function arguments, see the documentation of the function. Example:
+# ~~~
+#       get_project_version(
+#           VERSION_FILE ${CMAKE_CURRENT_SOURCE_DIR}/src/version/version.hpp
+#           PREFIX_OUT "MYPROJECT"
+#       )
+# ~~~
 
 # Extract version (number) from the provided version name (major, minor, etc) and content.
 #

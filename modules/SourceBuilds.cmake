@@ -1,6 +1,13 @@
 #
 # Copyright (C) 2025 Hugo Barbosa.
 #
+# Usage:
+#
+# - Include the module in your CMakeLists file and call the function:
+# ~~~
+#       include(SourceBuilds)
+#       validate_build_directory()
+# ~~~
 
 # Validate if the build directory is not the project source directory.
 function(validate_build_directory)

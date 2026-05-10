@@ -1,6 +1,32 @@
 #
 # Copyright (C) 2025 Hugo Barbosa.
 #
+# Usage:
+#
+# - Include the module in your CMakeLists file (recommended to include it optionally using a CMake
+#   option):
+# ~~~
+#       include(ClangTidy)
+# ~~~
+#
+# - Call the function with the desired configuration values in your CMakeLists file. For details
+#   about the function arguments, see the documentation of the function. Example:
+# ~~~
+#       add_clang_tidy(
+#           DIRECTORIES
+#               "${CMAKE_CURRENT_SOURCE_DIR}/examples"
+#               "${CMAKE_CURRENT_SOURCE_DIR}/include"
+#                ${CMAKE_CURRENT_SOURCE_DIR}/src"
+#               "${CMAKE_CURRENT_SOURCE_DIR}/test"
+#           LOG_FILE "${CMAKE_BINARY_DIR}/clang_tidy_report.log"
+#       )
+# ~~~
+#
+# - Configure and build the desired target. Example:
+# ~~~
+#       cmake -S . -B ./build
+#       cmake --build ./build --target clang_tidy
+# ~~~
 
 # Add a target for code static analysis using clang-tidy.
 #

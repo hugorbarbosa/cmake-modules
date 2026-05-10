@@ -1,6 +1,26 @@
 #
 # Copyright (C) 2025 Hugo Barbosa.
 #
+# Usage:
+#
+# - Include the module in your CMakeLists file:
+# ~~~
+#       include(GitInfo)
+# ~~~
+#
+# - Call the functions to get the git info and with the desired configuration values in your
+#   CMakeLists file. For details about the function arguments, see the documentation of the
+#   function. Example:
+# ~~~
+#       get_git_info("GIT_INFO")
+#       generate_git_info_file(
+#           GIT_BRANCH ${GIT_INFO_BRANCH}
+#           GIT_COMMIT_HASH ${GIT_INFO_COMMIT_HASH}
+#           HEADER_FILE_NAME "git_info.hpp"
+#           HEADER_GUARD "MY_PROJECT_GIT_INFO_HPP"
+#           HEADER_NAMESPACE "my_project"
+#       )
+# ~~~
 
 set(GIT_INFO_DIR "${CMAKE_CURRENT_LIST_DIR}")
 set(GIT_INFO_OUT_DIR "${CMAKE_CURRENT_BINARY_DIR}/git_info")

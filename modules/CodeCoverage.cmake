@@ -1,6 +1,36 @@
 #
 # Copyright (C) 2025 Hugo Barbosa.
 #
+# Usage:
+#
+# - Include the module in your CMakeLists file (recommended to include it optionally using a CMake
+#   option):
+# ~~~
+#       include(CodeCoverage)
+# ~~~
+#
+# - Call the function with the desired configuration values in your CMakeLists file. For details
+#   about the function arguments, see the documentation of the function. Example:
+# ~~~
+#       add_coverage(my_target
+#           EXCLUDE_PATTERNS
+#               "/usr/include/*"
+#               "/usr/local/*"
+#               "*/_deps/*"
+#               "${CMAKE_CURRENT_SOURCE_DIR}/test/*"
+#               "${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp"
+#           MIN_LINE_COVERAGE 90
+#           MIN_FUNCTION_COVERAGE 80
+#           REPORT_DIR "${CMAKE_BINARY_DIR}/coverage"
+#           PARALLEL 8
+#       )
+# ~~~
+#
+# - Configure and build the desired target. Example:
+# ~~~
+#       cmake -S . -B ./build
+#       cmake --build ./build --target coverage
+# ~~~
 
 set(CODE_COVERAGE_DIR "${CMAKE_CURRENT_LIST_DIR}")
 
