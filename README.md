@@ -50,7 +50,7 @@ git submodule add https://github.com/hugorbarbosa/cmake-modules external/cmake-m
 
 With the previous command, a `.gitmodules` file is created and the CMake modules are available in your project. You can select a specific tag, branch or commit hash of the CMake modules project that you want to use from its directory.
 
-With this option, the users of your project need to update the submodule after cloning your project:
+With this option, you need to update the submodule for setting up your project:
 
 ```sh
 git submodule update --init --recursive
