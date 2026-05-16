@@ -65,7 +65,7 @@ You can also copy the entire project source tree into your project. For this cas
 Having the CMake modules available in your project, it is just necessary to include the module that you want to use from your `CMakeLists.txt` file. To simplify module inclusion, it is recommended to add the modules directory to the CMake modules path variable, avoiding the need to specify the path in every inclusion, as shown below. The example considers that the project was placed in the `external` directory, and the CMake module file is named as "ModuleName.cmake":
 
 ```cmake
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/external/cmake-modules")
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/external/cmake-modules/modules")
 include(ModuleName)
 ```
 
