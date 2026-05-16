@@ -58,18 +58,28 @@ endif()
 if(CMAKEMOD_ENABLE_CMAKE_FORMAT)
     include(CmakeFormat)
     add_cmake_format(
-        DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/modules" EXTRA_FILES
-        "${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt" LOG_FILE
+        DIRECTORIES
+        "${CMAKE_CURRENT_SOURCE_DIR}/modules"
+        EXTRA_FILES
+        "${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt"
+        LOG_FILE
         "${CMAKE_BINARY_DIR}/cmake_format_report.log"
+        CONFIG_FILE
+        "${CMAKE_CURRENT_SOURCE_DIR}/.cmake-format.py"
     )
 endif()
 
 if(CMAKEMOD_ENABLE_CMAKE_LINT)
     include(CmakeLint)
     add_cmake_lint(
-        DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/modules" EXTRA_FILES
-        "${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt" LOG_FILE
+        DIRECTORIES
+        "${CMAKE_CURRENT_SOURCE_DIR}/modules"
+        EXTRA_FILES
+        "${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt"
+        LOG_FILE
         "${CMAKE_BINARY_DIR}/cmake_lint_report.log"
+        CONFIG_FILE
+        "${CMAKE_CURRENT_SOURCE_DIR}/.cmake-format.py"
     )
 endif()
 
