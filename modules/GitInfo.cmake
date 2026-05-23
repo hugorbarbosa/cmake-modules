@@ -22,7 +22,6 @@
 #       )
 # ~~~
 
-set(GIT_INFO_DIR "${CMAKE_CURRENT_LIST_DIR}")
 set(GIT_INFO_OUT_DIR "${CMAKE_CURRENT_BINARY_DIR}/git_info")
 
 # Get the project git information, namely the git branch and commit hash.
@@ -132,7 +131,7 @@ function(generate_git_info_file)
     file(MAKE_DIRECTORY ${GIT_INFO_OUT_DIR})
 
     # Header file to be configured.
-    set(header_file_in "${GIT_INFO_DIR}/git_info/git_info.hpp.in")
+    set(header_file_in "${CMAKE_CURRENT_FUNCTION_LIST_DIR}/git_info/git_info.hpp.in")
 
     # Generate the header file using the configuration variables.
     set(git_info_branch "${arg_GIT_BRANCH}")
