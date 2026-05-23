@@ -167,7 +167,9 @@ function(add_coverage target_name)
     set(report_file "${arg_REPORT_DIR}/index.html")
 
     # Helper script.
-    set(coverage_check_script "${CMAKE_CURRENT_FUNCTION_LIST_DIR}/code_coverage/code_coverage_checker.sh")
+    set(coverage_check_script
+        "${CMAKE_CURRENT_FUNCTION_LIST_DIR}/code_coverage/code_coverage_checker.sh"
+    )
 
     add_custom_target(
         ${coverage_target}
