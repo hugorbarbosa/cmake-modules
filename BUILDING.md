@@ -5,7 +5,7 @@ This guide provides detailed instructions to build the project, namely how to en
 ## Table of contents
 
 - [Requirements](#requirements)
-    - [Using Docker](#using-docker)
+    - [Development container](#development-container)
 - [CMake Presets](#cmake-presets)
 - [CMake coding style and format](#cmake-coding-style-and-format)
 
@@ -21,11 +21,11 @@ The following are the code quality tools used by the project (only required for 
 - cmake-format: CMake code formatting.
 - cmake-lint: CMake code linting.
 
-### Using Docker
+### Development container
 
-There is a Docker image available in this project that contains all the dependencies to build the project, as well as the development tools. This allows to quickly use the project without installing any tool in the local machine.
+There is a dev container available in this project that provides an environment containing all the dependencies to build the project, as well as the development tools. This allows to quickly use the project without installing any tool in the local machine.
 
-The instructions to use the docker image can be found [here](./docker/README.md).
+The instructions to use the dev container can be found [here](./.devcontainer/README.md).
 
 ## CMake Presets
 
